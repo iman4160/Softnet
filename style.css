@@ -110,7 +110,8 @@ body {
 header.header-flex h1 {
     color: #01377d !important;
     font-weight: 700;
-    text-align: center;
+    text-align: left; /* Align text to the left to make space for the logo */
+    padding-left: 80px; /* Adjust this value to create enough space. Start with 80px and fine-tune. */
 }
 
 header.header-flex {
@@ -126,6 +127,13 @@ header.header-flex .fa-bell {
 /* Responsive adjustments */
 
 @media (max-width: 767.98px) {
+    header.header-flex h1 {
+        padding-left: 50px; /* Adjust padding for smaller screens */
+        font-size: 1.5rem; /* You might also want to reduce the font size */
+    }
+    .header-logo {
+        height: 40px; /* Ensure logo height is appropriate for smaller screens */
+    }
     .header-flex {
         flex-direction: column;
         align-items: flex-start !important;
@@ -144,11 +152,9 @@ header.header-flex .fa-bell {
     .filter-section button {
         width: 100%;
     }
-    
 }
 
-/* Existing CSS styles */
-
+/* Existing CSS styles (duplicate of bg-red-gradient) */
 .bg-red-gradient {
     background: linear-gradient(to right bottom, #ffd100, #fed211);
 }
@@ -162,4 +168,21 @@ header.header-flex .fa-bell {
     background: linear-gradient(to right bottom, #ff7e5f, #feb47b);
 }
 
-/* Existing Responsive adjustments */
+/* --- LOGO STYLES --- */
+.header-logo {
+    position: absolute; /* Keeps it out of normal flow for precise placement */
+    top: 8px;          /* Adjust this value for desired distance from the top */
+    left: 20px;         /* Positions the logo 20px from the LEFT edge of the header */
+    height: 60px;       /* Set a fixed height for the logo. Adjust as needed! */
+    width: auto;        /* Ensures the aspect ratio is maintained */
+    z-index: 100;       /* Ensures the logo is on top of other elements if they overlap */
+}
+
+/* Responsive adjustments for smaller screens for the logo */
+@media (max-width: 767.98px) {
+    .header-logo {
+        height: 40px; /* Make the logo smaller on mobile devices */
+        left: 10px;  /* Adjust left padding for mobile */
+        top: 10px;   /* Adjust top padding for mobile */
+    }
+}
