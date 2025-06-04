@@ -176,29 +176,3 @@ header.header-flex .fa-bell {
         top: 10px;
     }
 }
-
-/* New styles for Chart.js legend items to mimic buttons */
-.chartjs-legend li {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* A subtle drop shadow */
-    border-radius: 0.25rem; /* Slightly rounded corners */
-    padding: 0.25rem 0.5rem; /* Some padding to make them look like buttons */
-    margin: 0.25rem; /* Space between items */
-    display: inline-flex; /* To allow padding and shadow */
-    align-items: center;
-    cursor: pointer !important; /* Indicate it's clickable, even if not functional yet */
-    transition: all 0.2s ease-in-out;
-    background-color: rgba(255, 255, 255, 0.8); /* Add a background for better shadow visibility */
-    color: #01377d; /* Ensure text color is readable */
-    font-weight: 500; /* Make text slightly bolder */
-}
-
-.chartjs-legend li:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.chartjs-legend li span {
-    margin-right: 0.5rem; 
-    border-radius: 0.125rem; 
-    cursor: progress !important; 
-}
